@@ -11,7 +11,7 @@ exports.adddevice=async(req,res)=>{
             manufacturer:Joi.string().required(),
         })
            let result=user.validate(req.body)
-           
+
            if(result.error){
                res.status(400).json(result.error.details[0].message)
                return ; 
